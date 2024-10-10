@@ -1,0 +1,25 @@
+[package]
+name = "wasmtest"
+version = "0.1.0"
+edition = "2021"
+
+# Optional: Specify the description, authors, and license
+description = "A simple WebAssembly project"
+authors = ["chimmykk@gmail.com"]
+
+
+[dependencies]
+# The `wasm-bindgen` crate allows interaction between Rust and JavaScript
+wasm-bindgen = "0.2.83"
+
+# Optionally, if you plan to use `wee_alloc` to reduce the size of the compiled Wasm binary
+wee_alloc = { version = "0.4.5", optional = true }
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = "z" # Use "z" for size optimization in release builds
+
+[lib]
+crate-type = ["cdylib"] # Ensure the library is compiled as a dynamic library
