@@ -1,0 +1,19 @@
+{
+  "name": "wasmtest",
+  "type": "module",
+  "collaborators": [
+    "chimmykk@gmail.com"
+  ],
+  "description": "A simple WebAssembly project",
+  "version": "0.1.0",
+  "files": [
+    "wasmtest_bg.wasm",
+    "wasmtest.js",
+    "wasmtest.d.ts"
+  ],
+  "main": "wasmtest.js",
+  "types": "wasmtest.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
