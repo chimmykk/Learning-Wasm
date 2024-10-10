@@ -12,7 +12,6 @@ export interface InitOutput {
   readonly greet: () => number;
 }
 
-
 export type SyncInitInput = BufferSource | WebAssembly.Module;
 /**
 * Instantiates the given `module`, which can either be bytes or
